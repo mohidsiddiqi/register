@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up </title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="googlefonts\montserrat.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="bootstrap\dist\css\bootstrap.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css\style_signup.css">
+</head>
+
+<body>
+    <div class="container-fluid sup-signup-container">
+        <div class="row justify-content-center">
+            <div class="col-10 col-sm-9 col-md-7 col-lg-6 p-1 my-1">
+                <div class="card">
+                    <header class='sup-signup-header text-center'>
+                        <h2>Teacher Registeration Form</h2>
+                        <p>Fill each field carefully before clicking Next</p>
+                    </header>
+
+                    <form action="" method="POST" id='sup-signup-form'>
+                        <div id="prog-indicator" class="text-center">
+                            <ul>
+                                <li class='active' id="step1">Step 1</li>
+                                <li id="step2">Step 2</li>
+                                <li id="step3">Step 3</li>
+                                <li id="step4">Step 4</li>
+                            </ul>
+                        </div>
+
+                        <fieldset class="sup-fieldset">
+                            <div class="form-card">
+                                <h1>Basic Information</h1>
+                                <!-- First Name -->
+                                <div class="field-wrapper">
+                                    <label for="firstname" class="input-label">First Name</label>
+                                    <input type="text" name="fname" id="fname" class="input-field" placeholder="Enter Your First Name...">
+                                    <small></small>
+                                </div>
+                                <!-- Last Name -->
+                                <div class="field-wrapper">
+                                    <label for="lastname" class="input-label">Last Name</label>
+                                    <input type="text" name="lname" id="lname" class="input-field" placeholder="Enter Your Last Name...">
+                                    <small></small>
+                                </div>
+                                <!-- Phone Number edit phone number using jquery plugin-->
+                                <div class="field-wrapper">
+                                    <label for="phonenumber" class="input-label">Phone Number</label>
+                                    <input type="tel" name="phonenumber" id="phonenumber" class="input-field" placeholder="Enter Phone Number...">
+                                    <small></small>
+                                </div>
+                                <!-- DATE OF BIRTH -->
+                                <div class="field-wrapper">
+                                    <label class="input-label" for="dob">Date Of Birth</label>
+                                    <input type="date" class="input-field" name="dob" id="dob">
+                                    <small></small>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary next button-next">Next</button>
+                        </fieldset>
+
+                        <fieldset class="sup-fieldset">
+                            <div class="form-card">
+
+                                <h1>Location and More</h1>
+                                <!-- Country  -->
+                                <div class="field-wrapper">
+                                    <label for="country" class="input-label">Country</label>
+                                    <input type="text" name="country" id="country" class="input-field" placeholder="Enter Your Country...">
+                                    <small></small>
+                                </div>
+                                <!-- City -->
+                                <div class="field-wrapper">
+                                    <label for="city" class="input-label">City</label>
+                                    <input type="text" name="city" id="city" class="input-field" placeholder="Enter Your City...">
+                                    <small></small>
+                                </div>
+                                <!-- GENDER -->
+                                <div class="field-wrapper">
+                                    <label for="gender" class="input-label">Gender</label>
+                                    <select name="gender" class="input-field" id="gender">
+                                        <option value="">Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <small></small>
+                                </div>
+                                <!-- Upload Your Picture -->
+                                <div class="field-wrapper">
+                                    <label for="picture" class="input-label">Upload Your Picture (Max 6mb)</label>
+                                    <input type="file"  name="picture" id="picture" accept="image/*">
+                                    <small></small>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary next button-next">Next</button>
+                            <button type="button" class="btn btn-danger prev button-prev">Previous</button>
+                        </fieldset>
+
+                        <fieldset class="sup-fieldset">
+                            <div class="form-card">
+                                <h1>Work And Research</h1>
+                                <!-- Last Degree -->
+                                <div class="field-wrapper">
+                                    <label for="degree" class="input-label">Last Degree You Obtained</label>
+                                    <input type="text" name="degree" id="degree" class="input-field" placeholder="Enter Last Degree">
+                                    <small></small>
+                                </div>
+                                <!-- Institution Name -->
+                                <div class="field-wrapper">
+                                    <label class="input-label">Institution Where You Are Working</label>
+                                    <input type="text" name="institution" class="input-field" id="institution" placeholder="Enter The Institution's Name">
+                                    <small></small>
+                                </div>
+                                <!-- Research Area -->
+                                <div class="field-wrapper">
+                                    <label for='research-area' class="input-label">Area Of Research</label>
+                                    <input type="text" name="research-area" class="input-field" id="research-area" placeholder="Enter Your Area Of Research">
+                                    <small></small>
+                                </div>
+                                <!-- Supervision on what basis? -->
+                                <div class="field-wrapper">
+                                    <label for="supervision-type" class="input-label">Supervision will be on the basis of</label>
+                                    <select name="supervision-type" class="input-field" id="supervision-type">
+                                        <option value="">Select Choice</option>
+                                        <option value="Scholarship">Scholarship</option>
+                                        <option value="Non-Scholarship">Non-Scholarship</option>
+                                    </select>
+                                    <small></small>
+                                </div>
+                                <!--More Students? -->
+                                <div class="field-wrapper">
+                                    <label class="input-label">Interested In More Students</label>
+                                    <input type="radio" name="radio-students" id="yes" value="Yes" checked> <label for="yes">Yes</label>
+                                    <input type="radio" name="radio-students" id="no" value="No"> <label for="no">No</label>
+                                    <small></small>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary next button-next">Next</button>
+                            <button type="button" class="btn btn-danger prev button-prev">Previous</button>
+
+                        </fieldset>
+
+                        <fieldset class="sup-fieldset">
+                            <div class="form-card">
+                                <h1>Account Information</h1>
+                                <!-- Username -->
+                                <div class="field-wrapper">
+                                    <label for="username" class="input-label">Username</label>
+                                    <input type="text" name="username" id="username" class="input-field" placeholder="Enter Your Username...">
+                                    <small>[6 - 20] characters required, can be numbers or alphabets, no special characters except . _ allowed</small>
+                                    <small></small>
+                                </div>
+                                <!-- Email -->
+                                <div class="field-wrapper">
+                                    <label for="email" class="input-label">Email Address</label>
+                                    <input type="text" name="email" id="email" class="input-field" placeholder="Enter Your Email Address">
+                                    <small></small>
+                                </div>
+                                <!-- Password -->
+                                <div class="field-wrapper">
+                                    <label for="password" class="input-label">Password</label>
+                                    <input type="password" name="password" id="password" class="input-field" placeholder="Enter Your Password...">
+                                    <small>8 or more characters required. Use a mix of letters, numbers & symbols for a stronger password</small>
+                                    <small></small>
+                                </div>
+                                <!-- Confirm Password -->
+                                <div class="field-wrapper">
+                                    <label for="cpassword" class="input-label">Confirm Password</label>
+                                    <input type="password" name="cpassword" id="cpassword" class="input-field" placeholder="Confirm Your Password...">
+                                    <small></small>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success submit button-next">Submit</button>
+                            <button type="button" class="btn btn-danger prev button-prev">Previous</button>
+                        </fieldset>
+                    </form>
+
+                    <footer class="sup-signup-footer text-center">
+                        <a href="" class="btn btn-block btn-dark">Already registered? Login Here</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="bootstrap\dist\js\bootstrap.min.js"></script>
+    <script src="js\script_signup.js"></script>
+</body>
+
+</html>
